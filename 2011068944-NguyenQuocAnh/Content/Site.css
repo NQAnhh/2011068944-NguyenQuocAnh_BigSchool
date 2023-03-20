@@ -18,3 +18,22 @@ select,
 textarea {
     max-width: 280px;
 }
+.course{
+    list-style:none;
+}
+.course .liii{
+    position: relative;
+    margin-bottom:30px;
+}
+.course .liii .date{
+    text-align: center;
+    background-color: #c61a1a;
+    color: white;
+    width: 60px;
+    border-radius: 8px;
+}
+.course .liii .details{
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
