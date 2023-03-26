@@ -21,18 +21,18 @@ textarea {
 .course{
     list-style:none;
 }
-.course .liii{
+.course .clr{
     position: relative;
     margin-bottom:30px;
 }
-.course .liii .date{
+.course .clr .date{
     text-align: center;
-    background-color: #c61a1a;
-    color: white;
+    background-color: #d41c1c;
+    color: black;
     width: 60px;
     border-radius: 8px;
 }
-.course .liii .details{
+.course .clr .details{
     position: absolute;
     top: 0;
     left: 70px;

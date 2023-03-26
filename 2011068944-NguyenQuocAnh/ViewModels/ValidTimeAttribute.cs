@@ -10,7 +10,7 @@ namespace _2011068944_NguyenQuocAnh.ViewModels
         {
             DateTime dateTime;
             var isValid = DateTime.TryParseExact(Convert.ToString(value),
-                "HH:mm",
+                "hh:mm",
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None, 
                 out dateTime);

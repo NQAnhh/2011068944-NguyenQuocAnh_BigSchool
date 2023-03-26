@@ -1,4 +1,5 @@
 ﻿using _2011068944_NguyenQuocAnh.Models;
+using _2011068944_NguyenQuocAnh.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -18,9 +19,15 @@ namespace _2011068944_NguyenQuocAnh.Controllers
         public ActionResult Index()
         {
             var upcomingCourses = _dbContext.Courses
+                .Include(c => c.Lectuner)
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
-            return View(upcomingCourses);
+            var viewModel = new CoursesViewModel
+            {
+                UpcommingCourses = upcomingCourses,
+                ShowAction = User.Identity.IsAuthenticated
+            };
+            return View(viewModel);
         }
 
         public ActionResult About()
